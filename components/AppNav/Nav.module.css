@@ -5,7 +5,10 @@
     align-items:center;
     justify-content: space-around;
     border-right: 1px solid white;
-    width: 8%;
-    height: 98vh;
+    width: 2vw;
+    height: 89vh;
     font-size: 30px;
+    padding: 30px;
+    margin: 0 3vw 0 0;
+    list-style: none
 }

@@ -5,17 +5,39 @@ import {SlHome} from 'react-icons/Sl'
 import {AiOutlineFire} from 'react-icons/Ai'
 import Link from 'next/link'
 
+const links = [
+    {
+      label: <GoSearch/>,
+      route: '/'
+    },
+    {
+      label: <FaRegHeart />,
+      route: '/favourites'
+    },
+    {
+      label: <AiOutlineFire />,
+      route: '/trending'
+    },
+    {
+        label: <GoCalendar/>,
+        route: '/upcoming'
+      }
+
+  ]
+
 export default function Nav(){
 
     return (
         <>
-        <div className={styles.container}>
-        <Link href="/"><SlHome /></Link>
-            <GoSearch />
-        <Link href="/favourites"> <FaRegHeart /></Link>
-        <Link href="/trending"><AiOutlineFire /></Link>
-        <Link href="/upcoming"><GoCalendar/></Link>
-        </div>
+        <ul className={styles.container}>
+          {links.map(({ label, route }) => {
+            return (
+              <li key={route}>
+                <Link href={route}>{label}</Link>
+              </li>
+            )
+          })}
+        </ul>
         </>
     )
 

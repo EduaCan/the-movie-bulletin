@@ -1,27 +1,23 @@
-
+import styles from './Layout.module.css'
 import React from 'react'
 import Head from 'next/head'
 import Navbar from '../AppNav/Nav'
 import LayoutProps from '../../interface/LayoutProps'
-import Footer from '../AppFooter/Footer'
 
 
-export default function Layout ({ children, title = 'The Movie Bulletin' }: LayoutProps) {
+export default function Layout  ({ children, title = 'The Movie Bulletin' }: LayoutProps) {
 
   return (
-    <div className='layout'>
+    <html>
       <Head>
         <title>{title}</title>
       </Head>
-      <header>
+      <main className={styles.container}>
+        <header>
         <Navbar />
-      </header>
-      <main>
+        </header>
         {children}
       </main>
-      <footer>
-        <Footer />
-      </footer>
-    </div>
+    </html>
   )
 }
