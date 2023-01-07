@@ -5,12 +5,12 @@ import Navbar from '../AppNav/Nav'
 import LayoutProps from '../../interface/LayoutProps'
 
 
-export default function Layout  ({ children, title = 'The Movie Bulletin' }: LayoutProps) {
+export default function Layout  ({ children }: LayoutProps) {
 
   return (
     <html>
       <Head>
-        <title>{title}</title>
+        <title>The Movie Bulletin</title>
       </Head>
         <header className={styles.test}>
         <Navbar />
