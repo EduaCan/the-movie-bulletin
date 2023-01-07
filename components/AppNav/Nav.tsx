@@ -4,7 +4,8 @@ import {FaRegHeart} from 'react-icons/Fa'
 import {SlHome} from 'react-icons/Sl'
 import {AiOutlineFire} from 'react-icons/Ai'
 import Link from 'next/link'
-const Nav = () => {
+
+export default function Nav(){
 
     return (
         <>
@@ -19,5 +20,3 @@ const Nav = () => {
     )
 
 }
-
-export default Nav
