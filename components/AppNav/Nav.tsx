@@ -32,7 +32,7 @@ export default function Nav(){
         <ul className={styles.container}>
           {links.map(({ label, route }) => {
             return (
-              <li key={route}>
+              <li className={styles.icons} key={route}>
                 <Link href={route}>{label}</Link>
               </li>
             )

@@ -12,10 +12,10 @@ export default function Layout  ({ children, title = 'The Movie Bulletin' }: Lay
       <Head>
         <title>{title}</title>
       </Head>
-      <main className={styles.container}>
-        <header>
+        <header className={styles.test}>
         <Navbar />
         </header>
+      <main className={styles.container}>
         {children}
       </main>
     </html>

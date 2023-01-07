@@ -4,11 +4,21 @@
     flex-direction: column;
     align-items:center;
     justify-content: space-around;
-    border-right: 1px solid white;
+    border-right: 1px solid rgb(62, 62, 62);
     width: 2vw;
-    height: 89vh;
+    height: 91.5vh;
+    position: fixed;
     font-size: 30px;
     padding: 30px;
     margin: 0 3vw 0 0;
-    list-style: none
+    list-style: none;
+    background-color: black;
+}
+
+.container a:hover{
+    color: rgb(60, 96, 246);
+}
+
+.container a:focus {
+    color: rgb(0, 86, 246)
 }
