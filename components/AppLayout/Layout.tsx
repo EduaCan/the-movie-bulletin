@@ -12,7 +12,7 @@ export default function Layout  ({ children }: LayoutProps) {
       <Head>
         <title>The Movie Bulletin</title>
       </Head>
-        <header className={styles.test}>
+        <header>
         <Navbar />
         </header> 
       <main className={styles.container}>

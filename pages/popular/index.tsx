@@ -1,7 +1,6 @@
 import movieRaw from "../../interface/movieRaw"
 import Tmdb from "../../services/tmdb.services"
-import Image from "next/image"
-import Link from "next/link"
+import MovieList from "../../components/AppMovieList/MovieList"
 
 
 
@@ -28,21 +27,11 @@ export default function Popular({movies} : movieRaw) {
   const imageSize = "w500" //move to better place
   return (
     <>
+    <section>
         <h1>Popular</h1>
-        {movies.length === 0 ? <h3>no results</h3> :
-        movies.map((movie : movieRaw)=> {
-          return (
-            <div key={movie.id}>
-              <Link href={`/movie/${movie.id}`}>
-                {movie.title}
-               <Image src={`https://image.tmdb.org/t/p/${imageSize}${movie.poster_path}`} alt={movie.original_title} width={350} height={350}/>
-              </Link>
-            </div>
-          )
-        })
-        }
+        <MovieList movies={movies}/>
 
-
+</section>
       </>
     )
   }
