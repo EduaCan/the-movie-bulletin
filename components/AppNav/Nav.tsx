@@ -16,7 +16,7 @@ const links = [
     },
     {
       label: <AiOutlineFire />,
-      route: '/trending'
+      route: '/popular'
     },
     {
         label: <GoCalendar/>,
