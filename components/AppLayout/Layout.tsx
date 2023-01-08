@@ -8,16 +8,17 @@ import LayoutProps from '../../interface/LayoutProps'
 export default function Layout  ({ children }: LayoutProps) {
 
   return (
-    <html>
+    <>
       <Head>
         <title>The Movie Bulletin</title>
       </Head>
         <header className={styles.test}>
         <Navbar />
-        </header>
+        </header> 
       <main className={styles.container}>
         {children}
       </main>
-    </html>
+    </>
+   
   )
 }

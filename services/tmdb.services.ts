@@ -18,4 +18,10 @@ export default class Tmdb {
           `${this.API_BASE}movie/popular?api_key=${this.TMDB_API_KEY}&language=${this.API_LANGUAGE}&page=${page}`
         );
       };
+
+    public getMovieDetails = async (id: number) => {
+        return this.fetchJSON(
+          `${this.API_BASE}movie/${id}?api_key=${this.TMDB_API_KEY}&language=${this.API_LANGUAGE}`
+        );
+      };
 }
