@@ -24,7 +24,7 @@ export default function Popular({movies} : movieRaw) {
   //     setMovies(results)
   //     console.log(movies)
   //   }
-  
+
   const imageSize = "w500" //move to better place
   return (
     <>
@@ -35,7 +35,7 @@ export default function Popular({movies} : movieRaw) {
             <div key={movie.id}>
               <Link href={`/movie/${movie.id}`}>
                 {movie.title}
-              {/* <Image src={`https://image.tmdb.org/t/p/${imageSize}${movie.poster_path}`} alt={movie.original_title} fill={true}/> */}
+               <Image src={`https://image.tmdb.org/t/p/${imageSize}${movie.poster_path}`} alt={movie.original_title} width={350} height={350}/>
               </Link>
             </div>
           )
