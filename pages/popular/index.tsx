@@ -2,10 +2,7 @@ import  { movieListProps, movieReduced } from "../../interface/movie"
 import Tmdb from "../../services/tmdb.services"
 import MovieList from "../../components/AppMovieList/MovieList"
 
-
-
 export default function Popular({ movies }: movieListProps) {
-
 
   return (
     <>
@@ -16,7 +13,6 @@ export default function Popular({ movies }: movieListProps) {
     </>
   )
 }
-
 
 export async function getStaticProps() {
   const apiTmdb = new Tmdb()
