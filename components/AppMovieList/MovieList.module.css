@@ -3,22 +3,27 @@
     flex-direction: row;
     flex-wrap: wrap;
     width: 85vw;
-    justify-content: space-between;
-    text-align: center;
-    
-
+    justify-content: center;
+    gap: 50px;
 }
 
-.card {
+.cardContainer {
+    width: 250px;
+    height: 450px;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
-    width: 15vw;
-    margin: 30px 40px 20px 0;
+    justify-content: center;
+    align-items: center;
     gap: 20px;
-    
+}
+.container a {
+    text-decoration: none;
+    font-size: 1.1rem;
 }
 
-.container a:hover {
+
+.container .linkImage:hover {
     transition: all 0.5s ease-in;
     background-size: center;
     transform: scale(1.1);
@@ -26,4 +31,5 @@
 
 .cardImage {
     text-decoration: none;
+    margin: 0 auto;
 }
