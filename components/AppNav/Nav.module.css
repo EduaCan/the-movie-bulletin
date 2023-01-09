@@ -13,6 +13,11 @@
     margin: 0 3vw 0 0;
     list-style: none;
     background-color: black;
+    color: aliceblue;
+}
+
+.container a {
+    color: aliceblue
 }
 
 .container a:hover{

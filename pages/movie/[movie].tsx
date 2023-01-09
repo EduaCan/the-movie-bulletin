@@ -1,32 +1,29 @@
-import { useRouter } from "next/router"
-import { useEffect, useState } from "react"
+import type { GetServerSidePropsContext } from "next";
+import { movieDetailsProps } from "../../interface/movie";
 import Tmdb from "../../services/tmdb.services"
 
-
-export default function Movie () {
-  const router = useRouter()
-  const {movie: movieId} = router.query //get params
-  const [details, setDetails] = useState(null)
-  
-  useEffect(()=>{ 
-    getMovieDataById(Number(movieId))
-  }, [])
-
-  const  getMovieDataById = async (movieId : number) => {
-    const apiTmdb =  new Tmdb()
-    const {results: details}  = await apiTmdb.getMovieDetails(movieId) //returns Error 401 Unauthorized response status code indicates that the client request has not been completed because it lacks valid authentication credentials for the requested resource.
-    setDetails(details)
-  }
-  
+export default function Movie ({details, casts}: movieDetailsProps) {
 
   return (
     <div>
-      <h1>MovieID</h1>
-      <h3>{`Movie id:${movieId}`}</h3>
+      <h1>{details.id}</h1>
 
       </div>
   )
 }
 
+export async function getServerSideProps (context: GetServerSidePropsContext) {
 
+  const {movie} = context.query
+
+  const apiTmdb = new Tmdb()
+  const detalles  = await apiTmdb.getMovieDetails(Number(movie))
+  const casts = await apiTmdb.getMovieCredits(Number(movie))
+  return {
+    props: {
+      detalles,
+      casts
+    },
+  };
+}
 

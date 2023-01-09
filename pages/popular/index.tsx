@@ -1,55 +1,34 @@
-import movieRaw from "../../interface/movieRaw"
+import  { movieListProps, movieReduced } from "../../interface/movie"
 import Tmdb from "../../services/tmdb.services"
 import MovieList from "../../components/AppMovieList/MovieList"
 
 
 
-export default function Popular({movies} : movieRaw) {
+export default function Popular({ movies }: movieListProps) {
 
-  // This is client call api
-  // const [movies, setMovies] = useState([])
 
-  // useEffect(()=> {
-  //   getData()
-  //   console.log(movies)
-  // },[])
-
-  // const getData = async () => {
-  //   const res = await fetch(
-  //     `https://api.themoviedb.org/3/movie/popular?api_key=b75586240b493bdf90f05932a64c4384&language=en-US&page=1`
-  //     );
-  //     const {results} = await res.json()
-      
-  //     setMovies(results)
-  //     console.log(movies)
-  //   }
-
-  const imageSize = "w500" //move to better place
   return (
     <>
-    <section>
+      <section>
         <h1>Popular</h1>
         <MovieList movies={movies}/>
+      </section>
+    </>
+  )
+}
 
-</section>
-      </>
-    )
-  }
 
-
-  export async function getServerSideProps() {
-     const apiTmdb =  new Tmdb()
-     const {results}  = await apiTmdb.getPopularMovies()
-
-     //Without service functs
-    // const res = await fetch(
-    //   `https://api.themoviedb.org/3/movie/popular?api_key=(SETKEYHERE)&language=en-US&page=1`
-    // );
-    // const {results} = await res.json()
+export async function getStaticProps() {
+  const apiTmdb = new Tmdb()
+  const { results} = await apiTmdb.getPopularMovies()
+  
+   const movies = results.map(({id, title, release_date, vote_average, poster_path}: movieReduced) => {
+     return {id, title, release_date, vote_average, poster_path}
+   })
 
   return {
     props: {
-      movies: results
+      movies
     },
   };
-  }
+}

@@ -24,4 +24,9 @@ export default class Tmdb {
           `${this.API_BASE}movie/${id}?api_key=${this.TMDB_API_KEY}&language=${this.API_LANGUAGE}`
         );
       };
+      public getMovieCredits = async (id: number) => {
+        return this.fetchJSON(
+          `${this.API_BASE}movie/${id}/credits?api_key=${this.TMDB_API_KEY}&language=${this.API_LANGUAGE}`
+        );
+      };
 }
