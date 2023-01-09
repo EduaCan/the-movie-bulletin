@@ -21,7 +21,7 @@ export interface movieRaw {
 
   export interface movieDetailsProps {
     details: movieDetails
-    casts: castDetails
+    cast: castDetails
   }
 
   export interface movieBasic {
