@@ -50,20 +50,6 @@ export interface movieRaw {
       overview: string,
       popularity: number,
       poster_path: string,
-      production_companies: [
-        {
-          id: number,
-          logo_path: string,
-          name: string,
-          origin_country: string,
-        },
-        {
-          id: number,
-          logo_path: string,
-          name: string,
-          origin_country: string
-        }
-      ],
       release_date: string,
       revenue: number,
       runtime: number,
@@ -82,5 +68,5 @@ export interface movieRaw {
       popularity: number,
       profile_path: string | null,
       credit_id: string,
-      job: string
+      character: string
   }
