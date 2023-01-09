@@ -1,5 +1,5 @@
 export interface movieRaw {
-        adult: boolean,
+      adult: boolean,
       backdrop_path: string,
       genre_ids: number[],
       id: number,
@@ -37,8 +37,44 @@ export interface movieRaw {
 
     
   export interface movieDetails extends movieBasic {
-    
-  }
+      budget: number,
+      genres: [
+        { id: number, name: string },
+        { id: 12, name: string},
+        { id: 28, name: string }
+      ],
+      homepage: string,
+      id: number,
+      original_language: string,
+      original_title: string,
+      overview: string,
+      popularity: number,
+      poster_path: string,
+      production_companies: [
+        {
+          id: number,
+          logo_path: string,
+          name: string,
+          origin_country: string,
+        },
+        {
+          id: number,
+          logo_path: string,
+          name: string,
+          origin_country: string
+        }
+      ],
+      release_date: string,
+      revenue: number,
+      runtime: number,
+      spoken_languages: [ { english_name: string, iso_639_1: string, name: string } ],
+      status: string,
+      tagline: string,
+      title: string,
+      vote_average: number,
+      vote_count: number
+    }
+  
 
   export interface castDetails extends movieBasic {
     

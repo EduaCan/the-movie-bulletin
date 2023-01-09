@@ -3,7 +3,7 @@ import { movieDetailsProps } from "../../interface/movie";
 import Tmdb from "../../services/tmdb.services"
 
 export default function Movie ({details, cast}: movieDetailsProps) {
-
+  
   return (
     <div>
       <h1>{details.id}</h1>
@@ -19,6 +19,7 @@ export async function getServerSideProps (context: GetServerSidePropsContext) {
   const apiTmdb = new Tmdb()
   const details  = await apiTmdb.getMovieDetails(Number(movie))
   const cast = await apiTmdb.getMovieCredits(Number(movie))
+  console.log(details)
   return {
     props: {
       details,
