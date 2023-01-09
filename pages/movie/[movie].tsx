@@ -19,7 +19,7 @@ export async function getServerSideProps (context: GetServerSidePropsContext) {
   const apiTmdb = new Tmdb()
   const details  = await apiTmdb.getMovieDetails(Number(movie))
   const cast = await apiTmdb.getMovieCredits(Number(movie))
-  console.log(details)
+  console.log(cast)
   return {
     props: {
       details,

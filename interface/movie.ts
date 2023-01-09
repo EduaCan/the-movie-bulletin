@@ -21,7 +21,7 @@ export interface movieRaw {
 
   export interface movieDetailsProps {
     details: movieDetails
-    cast: castDetails
+    cast: castDetails[]
   }
 
   export interface movieBasic {
@@ -77,5 +77,10 @@ export interface movieRaw {
   
 
   export interface castDetails extends movieBasic {
-    
+      id: number,
+      name: string,
+      popularity: number,
+      profile_path: string | null,
+      credit_id: string,
+      job: string
   }
