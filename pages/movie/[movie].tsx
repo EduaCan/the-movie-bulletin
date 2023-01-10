@@ -7,7 +7,7 @@ import CastList from "../../components/CastList/CastList";
 
 
 export default function Movie({ details, cast }: movieDetailsProps) {
-  // const imageSize = "w500" //move to better place
+  // const imageSize = "w500" //move to better place    
 
   return (
     <div className={styles.movieMain}>
