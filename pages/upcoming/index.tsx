@@ -1,26 +1,16 @@
 import MovieList from "../../components/AppMovieList/MovieList"
 import { movieListProps, movieReduced } from "../../interface/movie"
 import Tmdb from "../../services/tmdb.services"
+import { useAppSelector } from "../../store/hooks"
 
-export default function Upcoming({movies}: movieListProps) {
+export default function Upcoming() {
+
+  const popularMovies = useAppSelector((state) => state.popularMovies.value)
+
     return (
       <>
-        <MovieList movies={movies}/>
+        <MovieList popularMovies={popularMovies}/>
       </>
     )
   }
 
-  export async function getStaticProps() {
-    const apiTmdb = new Tmdb()
-    const {results} = await apiTmdb.getUpcomingMovies()
-    
-     const movies = results.map(({id, title, release_date, vote_average, poster_path,}: movieReduced) => {
-       return {id, title, release_date, vote_average, poster_path}
-     })
-  
-    return {
-      props: {
-        movies
-      },
-    };
-  }
