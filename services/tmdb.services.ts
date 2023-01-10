@@ -30,4 +30,11 @@ export default class Tmdb {
     );
   };
 
+  public getUpcomingMovies = async (page = 1) => {
+    return this.fetchJSON(
+      `${this.API_BASE}movie/upcoming?api_key=${this.TMDB_API_KEY}&language=${this.API_LANGUAGE}&page=${page}`
+    );
+  };
+
+
 }
