@@ -3,7 +3,7 @@ import { castDetails, movieDetailsProps } from "../../interface/movie";
 import styles from '../../components/CastList/CastList.module.css'
 
 
-export default function CastList({ cast }: castDetails) {
+export default function CastList({ cast }: movieDetailsProps) {
     const imageSize = "w500"
     return (
         <div className={styles.container}>

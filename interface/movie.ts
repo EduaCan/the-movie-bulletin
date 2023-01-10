@@ -20,7 +20,7 @@ export interface movieRaw {
   }
 
   export interface movieDetailsProps {
-    details: movieDetails
+    details?: movieDetails
     cast: castDetails[]
   }
 
@@ -71,7 +71,5 @@ export interface movieRaw {
       character: string
   }
 
-  export interface castDetails extends Array<castDetails>{
-    cast: castDetails[]
-  }
+  export interface Array<castDetails>   {}
 
