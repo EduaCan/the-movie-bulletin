@@ -7,7 +7,6 @@ import CastList from "../../components/CastList/CastList";
 
 
 export default function Movie({ details, cast }: movieDetailsProps) {
-  // const imageSize = "w500" //move to better place    
 
   return (
     <div className={styles.movieMain}>
@@ -18,7 +17,7 @@ export default function Movie({ details, cast }: movieDetailsProps) {
           <p>{details?.overview}</p>
         </div>
         <div className={styles.imageContainer}>
-          <Image className={styles.imageMovie} src={`https://image.tmdb.org/t/p/w1280${details.backdrop_path}`} fill={true} alt={details.title} />
+          <Image className={styles.imageMovie} src={`https://image.tmdb.org/t/p/w1280${details?.backdrop_path}`} fill={true} alt={details?.title ? details?.title : ""} />
         </div>
       </div>
       <CastList cast={cast}/>
