@@ -18,7 +18,7 @@ export async function getStaticProps() {
   const apiTmdb = new Tmdb()
   const { results} = await apiTmdb.getPopularMovies()
   
-   const movies = results.map(({id, title, release_date, vote_average, poster_path}: movieReduced) => {
+   const movies = results.map(({id, title, release_date, vote_average, poster_path,}: movieReduced) => {
      return {id, title, release_date, vote_average, poster_path}
    })
 

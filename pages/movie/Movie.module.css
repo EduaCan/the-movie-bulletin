@@ -1,0 +1,25 @@
+.movieContainer {
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.imageContainer {
+    position: relative;
+    width: 1150px;
+    height: 750px;
+}
+
+.imageMovie {
+    opacity: 1;
+    object-fit: cover;
+}
+
+.movieDetails {
+    margin-left:50px;
+    width: 30%;
+    z-index: 1;
+}
+

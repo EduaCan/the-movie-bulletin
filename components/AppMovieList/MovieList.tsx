@@ -15,7 +15,7 @@ export default function MovieList({ movies }: movieListProps) {
                         return (
                             <div key={movie.id} className={styles.cardContainer}  >
                             <Link  href={`/movie/${movie.id}`} className={styles.linkImage}>
-                                <Image className={styles.cardImage} src={`https://image.tmdb.org/t/p/${imageSize}${movie.poster_path}`} alt={movie.title} width={250} height={350} />
+                                <Image className={styles.cardImage} src={`https://image.tmdb.org/t/p/${imageSize}${movie.poster_path}`} alt={movie.title} fill={true} />
                             </Link>
                             <Link href={`/movie/${movie.id}`} >{movie.title.length >= 30 ? movie.title.slice(0, 28)+ "..." : movie.title}</Link>
                             </div>

@@ -38,6 +38,7 @@ export interface movieRaw {
     
   export interface movieDetails extends movieBasic {
       budget: number,
+      backdrop_path: string,
       genres: [
         { id: number, name: string },
         { id: 12, name: string},
