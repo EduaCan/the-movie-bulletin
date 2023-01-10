@@ -71,5 +71,7 @@ export interface movieRaw {
       character: string
   }
 
-  export interface castDetails extends Array<castDetails>{}
+  export interface castDetails extends Array<castDetails>{
+    cast: castDetails[]
+  }
 
