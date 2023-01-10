@@ -62,8 +62,7 @@ export interface movieRaw {
       vote_count: number
     }
   
-
-  export interface castDetails extends movieBasic {
+  export interface castDetails {
       id: number,
       name: string,
       popularity: number,
@@ -71,3 +70,6 @@ export interface movieRaw {
       credit_id: string,
       character: string
   }
+
+  export interface castDetails extends Array<castDetails>{}
+

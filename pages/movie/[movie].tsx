@@ -2,12 +2,13 @@ import type { GetServerSidePropsContext } from "next";
 import Image from "next/image";
 import { castDetails, movieDetailsProps } from "../../interface/movie";
 import Tmdb from "../../services/tmdb.services"
-import styles from '../../components/AppMovieList/MovieList.module.css'
+// import styles from '../../components/AppMovieList/MovieList.module.css'
 import styles2 from './Movie.module.css'
+import CastList from "../../components/CastList/CastList";
 
 
 export default function Movie({ details, cast }: movieDetailsProps) {
-  const imageSize = "w500" //move to better place
+  // const imageSize = "w500" //move to better place
 
   return (
     <div className={styles2.movieMain}>
@@ -21,8 +22,7 @@ export default function Movie({ details, cast }: movieDetailsProps) {
           <Image className={styles2.imageMovie} src={`https://image.tmdb.org/t/p/w1280${details.backdrop_path}`} fill={true} alt={details.title} />
         </div>
       </div>
-      <div className={styles.container}>
-
+      {/* <div className={styles.container}>
         {cast.length === 0 ? <h3>no results</h3> :
           cast.map((member: castDetails) => {
             if (member.profile_path) {  //short-circuit?
@@ -35,7 +35,8 @@ export default function Movie({ details, cast }: movieDetailsProps) {
             }
           })
         }
-      </div>
+      </div> */}
+      <CastList cast={cast}/>
     </div>
   )
 }
