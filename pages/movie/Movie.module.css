@@ -39,3 +39,11 @@
     gap: 20px;
 }
 
+.castContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    gap: 50px;
+}
