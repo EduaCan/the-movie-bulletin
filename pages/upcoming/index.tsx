@@ -17,8 +17,6 @@ export default function Upcoming({movies}: movieListProps) {
      const movies = results.map(({id, title, release_date, vote_average, poster_path,}: movieReduced) => {
        return {id, title, release_date, vote_average, poster_path}
      })
-
-    console.log(movies)
   
     return {
       props: {
