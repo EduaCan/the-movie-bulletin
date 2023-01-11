@@ -1,17 +1,16 @@
 import Image from "next/image";
 import Link from "next/link";
-import { movieReduced, movieListProps } from "../../interface/movie";
-import Tmdb from "../../services/tmdb.services";
+import { movieReduced, movieListReceivedProps } from "../../interface/movie";
 import styles from './MovieList.module.css'
 
 
-export default function MovieList({ popularMovies }: movieListProps) {
+export default function MovieList({ moviesToList }: movieListReceivedProps) {
     const imageSize = "w500" //move to better place
     return (
         <>
             <div className={styles.container}>
-                {popularMovies.length === 0 ? <h3>no results</h3> :
-                    popularMovies.map((movie: movieReduced) => {
+                {moviesToList.length === 0 ? <h3>no results</h3> :
+                    moviesToList.map((movie: movieReduced) => {
                         return (
                             <div key={movie.id} className={styles.cardContainer}  >
                                 <Link href={`/movie/${movie.id}`} className={styles.linkImage}>

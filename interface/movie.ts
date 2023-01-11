@@ -7,6 +7,11 @@ export interface movieBasic {
 
 export interface movieListProps {
   popularMovies: movieReduced[]
+  upcomingMovies: movieReduced[]
+}
+
+export interface movieListReceivedProps {
+  moviesToList: movieReduced[]
 }
 
 export interface movieDetailsProps {

@@ -1,10 +1,10 @@
 import { configureStore } from '@reduxjs/toolkit'
-import  popularMoviesReducer  from '../redux/movieSlice'
+import  apiMoviesReducer  from '../redux/movieSlice'
 // ...
 
 export const store = configureStore({
   reducer: {
-    popularMovies: popularMoviesReducer,
+    apiMovies: apiMoviesReducer,
   },
 })
 

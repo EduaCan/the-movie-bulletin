@@ -1,15 +1,15 @@
 import MovieList from "../../components/AppMovieList/MovieList"
-import { movieListProps, movieReduced } from "../../interface/movie"
-import Tmdb from "../../services/tmdb.services"
+// import { movieListProps, movieReduced } from "../../interface/movie"
+// import Tmdb from "../../services/tmdb.services"
 import { useAppSelector } from "../../store/hooks"
 
 export default function Upcoming() {
 
-  const popularMovies = useAppSelector((state) => state.popularMovies.value)
+  const upcomingMovies = useAppSelector((state) => state.apiMovies.upcomingMovies)
 
   return (
     <>
-      <MovieList popularMovies={popularMovies} />
+      <MovieList moviesToList={upcomingMovies} />
     </>
   )
 }

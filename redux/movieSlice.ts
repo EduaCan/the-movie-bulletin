@@ -4,29 +4,35 @@ import type { RootState } from '../store/store'
 import { movieReduced } from '../interface/movie'
 
 // Define a type for the slice state
-interface popularMoviesState {
-  value: []  | movieReduced[]
+interface moviesState {
+  popularMovies: []  | movieReduced[]
+  upcomingMovies: [] | movieReduced[]
 }
+
 
 // Define the initial state using that type
-const initialState: popularMoviesState = {
-  value: [],
+const initialState: moviesState = {
+  popularMovies: [],
+  upcomingMovies: []
 }
 
-export const counterSlice = createSlice({
-  name: 'popularMovies',
+export const apiMoviesSlice = createSlice({
+  name: 'apiMovies',
   // `createSlice` will infer the state type from the `initialState` argument
   initialState,
   reducers: {
     addPopularMovies: (state, action: PayloadAction<movieReduced[]>) => {
-      state.value = action.payload
+      state.popularMovies = action.payload
     },
+    addUpcomingMovies: (state, action: PayloadAction<movieReduced[]>) => {
+      state.upcomingMovies = action.payload
+    }
   },
 })
 
-export const { addPopularMovies } = counterSlice.actions
+export const { addPopularMovies, addUpcomingMovies } = apiMoviesSlice.actions
 
 // Other code such as selectors can use the imported `RootState` type
-export const selectCount = (state: RootState) => state.popularMovies.value
+export const selectApiMovies = (state: RootState) => {state.popularMovies, state.upcomingMovies}
 
-export default counterSlice.reducer
+export default apiMoviesSlice.reducer
