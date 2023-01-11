@@ -1,4 +1,4 @@
-import  { movieListProps, movieReduced } from "../../interface/movie"
+import { movieListProps, movieReduced } from "../../interface/movie"
 import Tmdb from "../../services/tmdb.services"
 import MovieList from "../../components/AppMovieList/MovieList"
 import { useAppSelector } from "../../store/hooks"
@@ -12,7 +12,7 @@ export default function Popular() {
     <>
       <section>
         <h1>Popular</h1>
-        <MovieList popularMovies={popularMovies}/>
+        <MovieList popularMovies={popularMovies} />
       </section>
     </>
   )

@@ -5,20 +5,20 @@ import Navbar from '../AppNav/Nav'
 import LayoutProps from '../../interface/LayoutProps'
 
 
-export default function Layout  ({ children }: LayoutProps) {
+export default function Layout({ children }: LayoutProps) {
 
   return (
     <>
       <Head>
         <title>The Movie Bulletin</title>
       </Head>
-        <header>
+      <header>
         <Navbar />
-        </header> 
+      </header>
       <main className={styles.container}>
         {children}
       </main>
     </>
-   
+
   )
 }

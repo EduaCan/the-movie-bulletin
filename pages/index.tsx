@@ -7,25 +7,24 @@ import { movieListProps, movieReduced } from '../interface/movie'
 
 const inter = Inter({ subsets: ['latin'] })
 
-export default function Home({popularMovies}: movieListProps) {
+export default function Home({ popularMovies }: movieListProps) {
   const dispatch = useAppDispatch()
-   dispatch(addPopularMovies(popularMovies))
+  dispatch(addPopularMovies(popularMovies))
 
   return (
     <>
-    <h1></h1>
+      <h1></h1>
     </>
   )
 }
 
 export async function getStaticProps() {
   const apiTmdb = new Tmdb()
-  const { results} = await apiTmdb.getPopularMovies()
-  
-   const popularMovies = results.map(({id, title, release_date, vote_average, poster_path,}: movieReduced) => {
-     return {id, title, release_date, vote_average, poster_path}
-   })
+  const { results } = await apiTmdb.getPopularMovies()
 
+  const popularMovies = results.map(({ id, title, release_date, vote_average, poster_path, }: movieReduced) => {
+    return { id, title, release_date, vote_average, poster_path }
+  })
 
   return {
     props: {

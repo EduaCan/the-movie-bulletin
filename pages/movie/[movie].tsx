@@ -20,7 +20,7 @@ export default function Movie({ details, cast }: movieDetailsProps) {
           <Image className={styles.imageMovie} src={`https://image.tmdb.org/t/p/w1280${details?.backdrop_path}`} fill={true} alt={details?.title ? details.title : ""} />
         </div>
       </div>
-      <CastList cast={cast}/>
+      <CastList cast={cast} />
     </div>
   )
 }

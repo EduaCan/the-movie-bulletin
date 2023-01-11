@@ -7,10 +7,10 @@ export default function Upcoming() {
 
   const popularMovies = useAppSelector((state) => state.popularMovies.value)
 
-    return (
-      <>
-        <MovieList popularMovies={popularMovies}/>
-      </>
-    )
-  }
+  return (
+    <>
+      <MovieList popularMovies={popularMovies} />
+    </>
+  )
+}
 
