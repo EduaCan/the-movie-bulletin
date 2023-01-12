@@ -43,6 +43,7 @@
     height: 400px;
     position: relative;
     transition: transform 0.2s;
+    overflow: hidden;
 }
 
 .cardImage {
