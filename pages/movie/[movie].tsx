@@ -10,6 +10,7 @@ export default function Movie({ details, cast }: movieDetailsProps) {
 
   return (
     <div className={styles.movieMain}>
+      {/* <Movie details={details} /> */}
       <div className={styles.movieContainer}>
         <div className={styles.movieDetails}>
           <h1>{details?.title}</h1>

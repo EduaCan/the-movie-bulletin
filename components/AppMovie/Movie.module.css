@@ -1,3 +1,4 @@
+
 .movieContainer {
     background-color: black;
     display: flex;
@@ -34,29 +35,4 @@
     margin-left:50px;
     width: 30%;
     z-index: 1;
-}
-
-.castCointainerImage {
-    position: relative;
-    width: 250px;
-    height: 350px;
-}
-
-.cardContainer {
-    width: 250px;
-    height: 450px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: left;
-    gap: 20px;
-}
-
-.castContainer {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    width: 100%;
-    justify-content: center;
-    gap: 50px;
 }

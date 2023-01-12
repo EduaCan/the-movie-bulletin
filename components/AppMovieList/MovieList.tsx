@@ -1,16 +1,20 @@
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/router";
 import { movieReduced, movieListReceivedProps } from "../../interface/movie";
 import styles from './MovieList.module.css'
 
 
 export default function MovieList({ moviesToList }: movieListReceivedProps) {
+    const router = useRouter()
+    const { pathname } = router
+
     const imageSize = "w500" //move to better place
     return (
         <>
-            <div className={styles.container}>
+            <div className={pathname === '/' ? styles.homeContainer : styles.container}>
                 {moviesToList.length === 0 ? <h3>no results</h3> :
-                    moviesToList.map((movie: movieReduced) => {
+                    moviesToList.map((movie: movieReduced, index) => {
                         return (
                             <div key={movie.id} className={styles.cardContainer}  >
                                 <Link href={`/movie/${movie.id}`} className={styles.linkImage}>

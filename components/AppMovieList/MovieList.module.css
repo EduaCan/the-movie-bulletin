@@ -7,20 +7,37 @@
     gap: 2vw 2vh;
 }
 
-.cardContainer {
-    width: 15vw;
-    height: 35vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: left;
-    gap: 2vw 2vh;
-}
 .container a {
     text-decoration: none;
     font-size: 1.1rem;
     transition: all 0.1s ease-in;
     color: aliceblue;
+}
+
+.homeContainer {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    gap: 2vw 2vh;
+    margin-left: 40px;
+}
+
+.homeContainer a {
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: all 0.1s ease-in;
+    color: aliceblue;
+}
+
+.cardContainer {
+    width: 250px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    gap: 2vw 2vh;
 }
 
 .linkImage {
