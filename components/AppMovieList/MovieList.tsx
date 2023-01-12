@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { AiFillStar, AiOutlineStar } from "react-icons/Ai";
 import { movieReduced, movieListReceivedProps } from "../../interface/movie";
 import styles from './MovieList.module.css'
 

@@ -98,9 +98,21 @@
 
 }
 
-@media (max-width: 800px) {
+@media (max-width: 640px) {
     .container {
-        margin: 0;
-        width: 90%;
+        margin: 0
+    }
+
+    .linkImage {
+        width: 120px;
+        height: 150px;
+        position: relative;
+        transition: transform 0.2s;
+
+    }
+    .cardContainer, .cardContainer a {
+        width: 120px;
+        font-size: 0.9rem;
+        margin: 0 auto;
     }
 }
