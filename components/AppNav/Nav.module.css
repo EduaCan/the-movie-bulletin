@@ -17,13 +17,16 @@
 }
 
 .container a {
-    color: aliceblue
+    color: aliceblue;
+    transition: all 0.5s
 }
 
 .container a:hover{
-    color: rgb(60, 96, 246);
+    color: #2196f3;
+    transition: all 0.5s
 }
 
 .container a:focus {
-    color: rgb(0, 86, 246)
+    color: rgb(0, 86, 246);
+    transition: all 0.5s
 }

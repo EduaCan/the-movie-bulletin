@@ -1,8 +1,7 @@
 import styles from './Nav.module.css'
-import { GoSearch, GoCalendar } from 'react-icons/Go'
-import { SlHome } from 'react-icons/Sl'
+import { GoCalendar } from 'react-icons/Go'
+import { SlHome, SlFire } from 'react-icons/Sl'
 import { FaRegHeart } from 'react-icons/Fa'
-import { AiOutlineFire } from 'react-icons/Ai'
 import Link from 'next/link'
 
 const links = [
@@ -15,7 +14,7 @@ const links = [
     route: '/favourites'
   },
   {
-    label: <AiOutlineFire />,
+    label: <SlFire />,
     route: '/popular'
   },
   {
