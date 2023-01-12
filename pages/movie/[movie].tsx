@@ -4,23 +4,14 @@ import { castDetails, movieDetailsProps } from "../../interface/movie";
 import Tmdb from "../../services/tmdb.services"
 import styles from './Movie.module.css'
 import CastList from "../../components/CastList/CastList";
+import MovieSelected from "../../components/AppMovie/Movie";
 
 
 export default function Movie({ details, cast }: movieDetailsProps) {
 
   return (
     <div className={styles.movieMain}>
-      {/* <Movie details={details} /> */}
-      <div className={styles.movieContainer}>
-        <div className={styles.movieDetails}>
-          <h1>{details?.title}</h1>
-          <p>{details?.vote_average}</p>
-          <p>{details?.overview}</p>
-        </div>
-        <div className={styles.imageContainer}>
-          <Image className={styles.imageMovie} src={`https://image.tmdb.org/t/p/w1280${details?.backdrop_path}`} fill={true} alt={details?.title ? details.title : ""} />
-        </div>
-      </div>
+      <MovieSelected details={details} />
       <CastList cast={cast} />
     </div>
   )

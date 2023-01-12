@@ -1,10 +1,11 @@
+
 import Image from 'next/image'
-import { movieDetailsProps } from '../../interface/movie'
+import { movieDetailsProps, movieReduced } from '../../interface/movie'
 import styles from './Movie.module.css'
 
-export default function MovieList({ details }: movieDetailsProps) {
+export default function Movie ({ details }: movieDetailsProps) {
     
-    console.log(details);
+    console.log(details?.backdrop_path);
 
     return (
     <div className={styles.movieContainer}>

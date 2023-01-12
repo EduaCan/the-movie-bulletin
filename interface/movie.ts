@@ -3,6 +3,8 @@ export interface movieBasic {
   release_date: string,
   title: string,
   vote_average: number,
+  backdrop_path: string,
+  overview: string
 }
 
 export interface movieListProps {
@@ -16,7 +18,7 @@ export interface movieListReceivedProps {
 
 export interface movieDetailsProps {
   details?: movieDetails
-  cast: castDetails[]
+  cast?: castDetails[]
 }
 
 export interface movieReduced extends movieBasic {

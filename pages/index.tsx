@@ -5,6 +5,7 @@ import { addPopularMovies, addUpcomingMovies } from '../redux/movieSlice'
 import { movieListProps, movieReduced } from '../interface/movie'
 import MovieList from '../components/AppMovieList/MovieList'
 import styles from './home.module.css'
+import Movie from '../components/AppMovie/Movie'
 
 // const inter = Inter({ subsets: ['latin'] })
 
@@ -16,6 +17,8 @@ export default function Home({ popularMovies, upcomingMovies }: movieListProps) 
 
   return (
     <>
+    <div className={styles.container}>
+      <Movie details={popularMovies[0]} />
     <div className={styles.main}>
       <h1>Popular</h1>
       <MovieList moviesToList={popularMovies} />
@@ -23,6 +26,7 @@ export default function Home({ popularMovies, upcomingMovies }: movieListProps) 
       <MovieList moviesToList={upcomingMovies} />
       <h1>Favorites</h1>
       <p>Comming soon</p>
+    </div>
     </div>
     </>
   )
@@ -33,8 +37,8 @@ export async function getStaticProps() {
   const { results : apiPopularMovies } = await apiTmdb.getPopularMovies()
   const {results : apiUpcomingMovies } = await apiTmdb.getUpcomingMovies()
 
-  const popularMovies = apiPopularMovies.map(({ id, title, release_date, vote_average, poster_path, }: movieReduced) => {
-    return { id, title, release_date, vote_average, poster_path }
+  const popularMovies = apiPopularMovies.map(({ id, title, release_date, vote_average, poster_path, backdrop_path, overview }: movieReduced) => {
+    return { id, title, release_date, vote_average, poster_path, backdrop_path, overview }
   })
 
   const upcomingMovies = apiUpcomingMovies.map(({ id, title, release_date, vote_average, poster_path, }: movieReduced) => {
