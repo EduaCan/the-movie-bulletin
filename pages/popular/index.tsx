@@ -8,10 +8,7 @@ export default function Popular() {
 
   return (
     <>
-      <section>
-        <h1>Popular</h1>
-        <MovieList moviesToList={popularMovies} />
-      </section>
+        <MovieList moviesToList={popularMovies} title={'Popular Movies'}/>
     </>
   )
 }

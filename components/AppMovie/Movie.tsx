@@ -5,8 +5,6 @@ import styles from './Movie.module.css'
 
 export default function Movie ({ details }: movieDetailsProps) {
     
-    console.log(details?.backdrop_path);
-
     return (
     <div className={styles.movieContainer}>
         <div className={styles.movieDetails}>

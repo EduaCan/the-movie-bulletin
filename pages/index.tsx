@@ -20,12 +20,16 @@ export default function Home({ popularMovies, upcomingMovies }: movieListProps) 
     <div className={styles.container}>
       <Movie details={popularMovies[0]} />
     <div className={styles.main}>
-      <h1>Popular</h1>
-      <MovieList moviesToList={popularMovies} />
-      <h1>Upcoming</h1>
-      <MovieList moviesToList={upcomingMovies} />
+      <div>
+      <MovieList moviesToList={popularMovies} title={'Popular movies'}/>
+      </div>
+      <div>
+      <MovieList moviesToList={upcomingMovies} title={'Upcoming movies'}/>
+      </div>
+      <div>
       <h1>Favorites</h1>
       <p>Comming soon</p>
+      </div>
     </div>
     </div>
     </>

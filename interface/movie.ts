@@ -14,6 +14,7 @@ export interface movieListProps {
 
 export interface movieListReceivedProps {
   moviesToList: movieReduced[]
+  title: string
 }
 
 export interface movieDetailsProps {

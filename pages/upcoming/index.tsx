@@ -7,7 +7,7 @@ export default function Upcoming() {
 
   return (
     <>
-      <MovieList moviesToList={upcomingMovies} />
+      <MovieList moviesToList={upcomingMovies} title={'Upcoming Movies'} />
     </>
   )
 }

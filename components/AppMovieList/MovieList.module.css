@@ -1,3 +1,12 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.wrapper {
+    text-align: center;
+}
+
 .container {
     display: flex;
     flex-direction: row;
@@ -19,8 +28,8 @@
     width: 100%;
     justify-content: center;
     gap: 2vw 2vh;
-    margin-left: 40px;
 }
+
 
 .cardContainer {
     display: flex;
@@ -36,6 +45,7 @@
     position: relative;
     max-width: 100%;
     transition: transform 0.2s;
+    overflow: hidden;
 
 }
 
@@ -46,6 +56,31 @@
 }
 
 .cardImage:hover {
-    transform: scale(1.02);
+    transform: scale(1.05);
     transition: transform 0.5s;
 }
+
+.titleContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+}
+
+.linkTitle {
+    border: 2px solid transparent;
+    margin-top: 7px;
+    text-decoration: none;
+    color: #2196f3;
+    transition: text-decoration 1s;
+    font-size: 1.1rem;
+    transition: all 0.5s;
+}
+
+.linkTitle:hover {
+    border-bottom: 2px solid #2196f3;
+    transition: all 0.5s;
+
+}
+
