@@ -1,19 +1,18 @@
 .wrapper {
     display: flex;
     flex-direction: column;
+    text-align: start;
 }
 
-.wrapper {
-    text-align: center;
-}
 
 .container {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    width: 100%;
+    width: 99%;
     justify-content: center;
     gap: 2vw 2vh;
+    margin: 20px;
 }
 
 .container a, .homeContainer a {
@@ -36,17 +35,14 @@
     flex-direction: column;
     justify-content: center;
     align-items: left;
-    gap: 2vw 2vh;
+    gap: 1vw 1vh;
 }
 
 .linkImage {
     width: 270px;
     height: 400px;
     position: relative;
-    max-width: 100%;
     transition: transform 0.2s;
-    overflow: hidden;
-
 }
 
 .cardImage {
@@ -62,15 +58,20 @@
 
 .titleContainer {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 12px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.titleContainer p{
+    color: grey;
 }
 
 .linkTitle {
     border: 2px solid transparent;
-    margin-top: 7px;
     text-decoration: none;
     color: #2196f3;
     transition: text-decoration 1s;
@@ -84,3 +85,22 @@
 
 }
 
+.mainTitle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.mainTitle a{
+    font-size: 1.2rem;
+    margin-top: 5px;
+
+}
+
+@media (max-width: 800px) {
+    .container {
+        margin: 0;
+        width: 90%;
+    }
+}

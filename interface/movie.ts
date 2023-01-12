@@ -49,7 +49,7 @@ export interface movieDetails extends movieBasic {
   status: string,
   tagline: string,
   title: string,
-  vote_average: number,
+  vote_average: any,
   vote_count: number
 }
 

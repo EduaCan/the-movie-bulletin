@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import { AiFillStar, AiOutlineStar } from "react-icons/Ai";
 import { movieReduced, movieListReceivedProps } from "../../interface/movie";
 import styles from './MovieList.module.css'
 
@@ -13,10 +14,13 @@ export default function MovieList({ moviesToList, title }: movieListReceivedProp
     return (
         <div className={styles.wrapper}>
             <div className={styles.titleContainer}>
+                <div className={styles.mainTitle}>
                 <h1>{title}</h1>
                 {pathname === '/' &&
                 <Link href={title.split(' ')[0].toLowerCase()} className={styles.linkTitle}>Explore all</Link>
                 }
+                </div>
+                <p>{moviesToList.length} Items</p>
             </div>
             <div className={pathname === '/' ? styles.homeContainer : styles.container}>
                 {moviesToList.length === 0 ? <h3>no results</h3> :
