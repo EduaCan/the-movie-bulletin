@@ -74,3 +74,7 @@ export interface videosProps {
   size: number;
   type: string;
 }
+
+export interface ratingDetails {
+  voteAverage: number
+}
