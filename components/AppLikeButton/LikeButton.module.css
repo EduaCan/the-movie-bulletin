@@ -1,0 +1,15 @@
+.likeButton {
+    margin: 0;
+    position: absolute;
+    z-index: 2;
+    transform: translate(210px, -210px);
+    background-color: transparent;
+    border: none;
+    transition: all 0.2s;
+}
+
+.likeButton:hover {
+    cursor: pointer;
+    transform: translate(210px, -210px) scale(1.2);
+    transition: all 0.5s;
+}
