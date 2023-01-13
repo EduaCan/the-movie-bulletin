@@ -1,62 +1,67 @@
 .movieContainer {
-    background-color: black;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+  background-color: black;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .imageContainer {
-    position: relative;
-    width: 1150px;
-    height: 750px;
+  position: relative;
+  width: 1150px;
+  height: 750px;
 }
 
 .imageContainer::before {
-    z-index: 2;
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 50%;
-    height: 100%;
-    background-color: black;
-    opacity: 1;;
-    background: linear-gradient(to right, black, transparent);
-  }
+  z-index: 2;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background-color: black;
+  opacity: 1;
+  background: linear-gradient(to right, black, transparent);
+}
 
 .imageMovie {
-    background-image: linear-gradient(90deg, #000 0, transparent 50%, transparent);
-    object-fit: cover;
+  background-image: linear-gradient(
+    90deg,
+    #000 0,
+    transparent 50%,
+    transparent
+  );
+  object-fit: cover;
 }
 
 .movieDetails {
-    margin-left:50px;
-    width: 30%;
-    z-index: 1;
+  margin-left: 50px;
+  width: 30%;
+  z-index: 1;
 }
 
 .castCointainerImage {
-    position: relative;
-    width: 250px;
-    height: 350px;
+  position: relative;
+  width: 250px;
+  height: 350px;
 }
 
 .cardContainer {
-    width: 250px;
-    height: 450px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: left;
-    gap: 20px;
+  width: 250px;
+  height: 450px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+  gap: 20px;
 }
 
 .castContainer {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    width: 100%;
-    justify-content: center;
-    gap: 50px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
+  gap: 50px;
 }

@@ -1,67 +1,64 @@
 .imageContainer {
-    position: relative;
-    width: 400px;
-    height: 550px;
-    margin: 20px 70px; 
+  position: relative;
+  width: 400px;
+  height: 550px;
+  margin: 20px 70px;
 }
 
 .container {
-    display: flex;
-    margin: 40px 0;
-    align-items: center;
+  display: flex;
+  margin: 40px 0;
+  align-items: center;
 }
 
-.container p{
-    font-size: 1.1rem;
+.container p {
+  font-size: 1.1rem;
 }
 
 .detailsCointainer {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 50%;
 }
 
-.detailsCointainer table{
-    font-size: 1.3rem;
+.detailsCointainer table {
+  font-size: 1.3rem;
 }
 
 .detailsCointainer table tbody {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-    
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
 }
 .detailsCointainer tr {
-    display: flex;
-    gap: 4vw;
-    align-items: flex-start;
-    justify-content: flex-start;
+  display: flex;
+  gap: 4vw;
+  align-items: flex-start;
+  justify-content: flex-start;
 }
 
 .detailsCointainer td {
-    display: flex;
-    align-items: flex-start;
-    justify-content: end;
-
+  display: flex;
+  align-items: flex-start;
+  justify-content: end;
 }
 
-@media (max-width: 900px) { 
+@media (max-width: 900px) {
+  .container {
+    font-size: 1.3rem;
+  }
 
-    .container {
-        font-size: 1.3rem;
-    }
+  .container p {
+    font-size: 1.8rem;
+  }
 
-    .container p{
-        font-size: 1.8rem;
-    }
+  .imageContainer {
+    width: 550px;
+    height: 650px;
+  }
 
-    .imageContainer {
-        width: 550px;
-        height: 650px;
-    }
-
-    .detailsCointainer {
-        margin-right: 20px;
-    }
+  .detailsCointainer {
+    margin-right: 20px;
+  }
 }

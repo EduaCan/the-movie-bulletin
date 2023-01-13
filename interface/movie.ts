@@ -18,12 +18,18 @@ export interface movieListReceivedProps {
 }
 
 export interface movieDetailsProps {
-  details?: movieDetails
+  details?: movieDetails | movieReduced
   cast?: castDetails[]
+  popularity?: any
 }
 
 export interface movieReduced extends movieBasic {
   poster_path: string
+  spoken_languages: []
+  genres: []
+  revenue: string
+  runtime: string
+  budget: string
 }
 
 
@@ -64,16 +70,7 @@ export interface castDetails {
 
 export interface Array<castDetails> { }
 
-export interface videosProps {
-  id: string;
-  iso_639_1: string;
-  iso_3166_1: string;
-  key: string;
-  name: string;
-  site: string;
-  size: number;
-  type: string;
-}
+
 
 export interface ratingDetails {
   voteAverage: number

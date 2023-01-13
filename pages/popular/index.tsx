@@ -8,7 +8,7 @@ export default function Popular() {
 
   return (
     <>
-        <MovieList moviesToList={popularMovies} title={'Popular Movies'}/>
+      <MovieList moviesToList={popularMovies} title={'Popular Movies'} />
     </>
   )
 }

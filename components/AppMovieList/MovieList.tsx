@@ -15,10 +15,10 @@ export default function MovieList({ moviesToList, title }: movieListReceivedProp
         <div className={styles.wrapper}>
             <div className={styles.titleContainer}>
                 <div className={styles.mainTitle}>
-                <h1>{title}</h1>
-                {pathname === '/' &&
-                <Link href={title.split(' ')[0].toLowerCase()} className={styles.linkTitle}>Explore all</Link>
-                }
+                    <h1>{title}</h1>
+                    {pathname === '/' &&
+                        <Link href={title.split(' ')[0].toLowerCase()} className={styles.linkTitle}>Explore all</Link>
+                    }
                 </div>
                 <p>{moviesToList.length} Items</p>
             </div>
@@ -35,7 +35,7 @@ export default function MovieList({ moviesToList, title }: movieListReceivedProp
                                     <Image src={`https://image.tmdb.org/t/p/${imageSize}${movie.poster_path}`} alt={movie.title} fill={true} className={styles.cardImage} />
                                 </Link>
                                 <Link href={`/movie/${movie.id}`} >{movie.title.length >= 30 ? movie.title.slice(0, 28) + "..." : movie.title}</Link>
-                                <Rating voteAverage={movie.vote_average}/>
+                                <Rating voteAverage={movie.vote_average} />
                             </div>
                         )
                     })

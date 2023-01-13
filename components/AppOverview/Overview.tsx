@@ -7,13 +7,13 @@ export default function Overview({ details }: movieDetailsProps) {
 
     const minToHours = (minutes: any) => {
         return `${(minutes / 60) ^ 0}h ` + (minutes % 60) + 'min';
-      };
+    };
 
-     const numberWithCommas = (number: any): string => {
+    const numberWithCommas = (number: any): string => {
         return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
     };
 
-    const detailsGenres = details?.genres.map( genre => genre.name).join(', ')
+    const detailsGenres = details?.genres.map(genre => genre.name).join(', ')
     const languages = details?.spoken_languages.map(lan => lan.name).join(', ')
 
     return (
@@ -36,15 +36,15 @@ export default function Overview({ details }: movieDetailsProps) {
                             <tr>
                                 <td>Runtime</td>
                                 <td>{minToHours(details?.runtime)}</td>
-                            </tr>                            
+                            </tr>
                             <tr>
                                 <td>Budget</td>
                                 <td>{numberWithCommas(details?.budget)}</td>
-                            </tr>      
+                            </tr>
                             <tr>
                                 <td>Revenue</td>
                                 <td>{numberWithCommas(details?.revenue)}</td>
-                            </tr>                               
+                            </tr>
                             <tr>
                                 <td>Genres</td>
                                 <td>{detailsGenres}</td>

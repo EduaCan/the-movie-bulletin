@@ -1,11 +1,11 @@
 .container {
-    display: flex;
-    flex-direction: row;
-    margin-left: 100px;
+  display: flex;
+  flex-direction: row;
+  margin-left: 100px;
 }
 
 @media (max-width: 800px) {
-    .container {
-        margin-left: 80px;
-    }
+  .container {
+    margin-left: 80px;
+  }
 }

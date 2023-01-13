@@ -14,32 +14,31 @@ export default function Home({ popularMovies, upcomingMovies }: movieListProps) 
   dispatch(addPopularMovies(popularMovies))
   dispatch(addUpcomingMovies(upcomingMovies))
 
-
   return (
     <>
-    <div className={styles.container}>
-      <Movie details={popularMovies[0]} />
-    <div className={styles.main}>
-      <div>
-      <MovieList moviesToList={popularMovies} title={'Popular movies'}/>
+      <div className={styles.container}>
+        <Movie details={popularMovies[0]} />
+        <div className={styles.main}>
+          <div>
+            <MovieList moviesToList={popularMovies} title={'Popular movies'} />
+          </div>
+          <div>
+            <MovieList moviesToList={upcomingMovies} title={'Upcoming movies'} />
+          </div>
+          <div>
+            <h1>Favorites</h1>
+            <p>Comming soon</p>
+          </div>
+        </div>
       </div>
-      <div>
-      <MovieList moviesToList={upcomingMovies} title={'Upcoming movies'}/>
-      </div>
-      <div>
-      <h1>Favorites</h1>
-      <p>Comming soon</p>
-      </div>
-    </div>
-    </div>
     </>
   )
 }
 
 export async function getStaticProps() {
   const apiTmdb = new Tmdb()
-  const { results : apiPopularMovies } = await apiTmdb.getPopularMovies()
-  const {results : apiUpcomingMovies } = await apiTmdb.getUpcomingMovies()
+  const { results: apiPopularMovies } = await apiTmdb.getPopularMovies()
+  const { results: apiUpcomingMovies } = await apiTmdb.getUpcomingMovies()
 
   const popularMovies = apiPopularMovies.map(({ id, title, release_date, vote_average, poster_path, backdrop_path, overview }: movieReduced) => {
     return { id, title, release_date, vote_average, poster_path, backdrop_path, overview }

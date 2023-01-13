@@ -8,7 +8,7 @@ import Overview from "../../components/AppOverview/Overview";
 
 
 
-export default function Movie({ details, cast}: movieDetailsProps) {
+export default function Movie({ details, cast }: movieDetailsProps) {
 
   return (
     <div className={styles.movieMain}>

@@ -4,11 +4,11 @@ import styles from '../../components/CastList/CastList.module.css'
 
 
 export default function CastList({ cast }: movieDetailsProps) {
-    const imageSize = "w500"
-    return (
+  const imageSize = "w500"
+  return (
     <div className={styles.container}>
-          <h1>Cast</h1>
-        <div className={styles.castContainer}>
+      <h1>Cast</h1>
+      <div className={styles.castContainer}>
         {cast?.length === 0 ? <h3>no results</h3> :
           cast?.map((member: castDetails) => {
             if (member.profile_path) {  //short-circuit?
@@ -21,7 +21,7 @@ export default function CastList({ cast }: movieDetailsProps) {
             }
           })
         }
-        </div>
       </div>
-    )
+    </div>
+  )
 }
