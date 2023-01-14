@@ -1,4 +1,4 @@
-import { movieDetailsProps, ratingDetails } from "../../interface/movie"
+import { ratingDetails } from "../../interface/movie"
 import { AiFillStar, AiOutlineStar } from 'react-icons/Ai'
 
 export default function Rating({ voteAverage }: ratingDetails) {

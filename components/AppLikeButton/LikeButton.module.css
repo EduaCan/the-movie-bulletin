@@ -27,7 +27,7 @@
 
   .likeButton:hover {
     cursor: pointer;
-    transform: translate(70px, -120px) scale(1.2);
+    transform: translate(75px, -100px) scale(1.1);
     transition: all 0.5s;
   }
 }

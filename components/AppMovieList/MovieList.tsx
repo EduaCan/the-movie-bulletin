@@ -25,12 +25,12 @@ export default function MovieList({ moviesToList, title }: movieListReceivedProp
             <div className={pathname === '/' ? styles.homeContainer : styles.container}>
                 {moviesToList.length === 0 ? <h3>no results</h3> :
                     moviesToList.map((movie: movieReduced, index) => {
-                        if (pathname === '/' && index > 5) {
+                        if (pathname === '/' && index >= 4) {
                             return
                         }
                         return (
                             <div key={movie.id} className={styles.cardContainer}  >
-                                <LikeButton />
+                                <LikeButton details={movie} />
                                 <Link href={`/movie/${movie.id}`} className={styles.linkImage}>
                                     <Image src={`https://image.tmdb.org/t/p/${imageSize}${movie.poster_path}`} alt={movie.title} fill={true} className={styles.cardImage} />
                                 </Link>
