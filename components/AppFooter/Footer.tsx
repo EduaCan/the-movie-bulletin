@@ -1,6 +1,6 @@
 
 import styles from './Footer.module.css'
-import { AiFillGithub } from 'react-icons/Ai'
+import { AiFillGithub } from 'react-icons/ai'
 
 
 export default function Footer() {

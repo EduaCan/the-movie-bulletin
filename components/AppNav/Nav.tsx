@@ -1,7 +1,7 @@
 import styles from './Nav.module.css'
-import { GoCalendar } from 'react-icons/Go'
-import { SlHome, SlFire } from 'react-icons/Sl'
-import { FaRegHeart } from 'react-icons/Fa'
+import { GoCalendar } from 'react-icons/go'
+import { SlHome, SlFire } from 'react-icons/sl'
+import { FaRegHeart } from 'react-icons/fa'
 import Link from 'next/link'
 
 const links = [

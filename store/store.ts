@@ -21,12 +21,12 @@ const rootReducer = combineReducers({
 const persistedReducer = persistReducer(persistConfig, rootReducer)
 //redux-persist
 
-export const store = configureStore({
+
+export const store= configureStore({
   reducer: {
     apiMovies: apiMoviesReducer,
     favouriteMovies: persistedReducer,
     middleware: [thunk],
-    
   },
 })
 
