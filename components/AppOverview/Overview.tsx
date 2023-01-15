@@ -5,16 +5,16 @@ import styles from './Overview.module.css'
 
 export default function Overview({ details }: movieDetailsProps) {
 
-    const minToHours = (minutes: any) => {
+    const minToHours = (minutes: number) => {
         return `${(minutes / 60) ^ 0}h ` + (minutes % 60) + 'min';
     };
 
-    const numberWithCommas = (number: any): string => {
+    const numberWithCommas = (number: string): string => {
         return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
     };
 
-    const detailsGenres = details?.genres.map(genre => genre.name).join(', ')
-    const languages = details?.spoken_languages.map(lan => lan.name).join(', ')
+    const detailsGenres = details?.genres.map((genre: any) => genre.name).join(', ')
+    const languages = details?.spoken_languages.map((lan: any) => lan.name).join(', ')
 
     return (
         <>

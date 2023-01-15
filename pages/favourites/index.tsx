@@ -9,7 +9,10 @@ export default function Favourites() {
 
   return (
     <>
+    <div className={styles.container}>
       <MovieList moviesToList={favouriteMovies} title={'Favourite movies'} />
+
+    </div>
     </>
   )
 }

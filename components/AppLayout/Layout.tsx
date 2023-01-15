@@ -3,6 +3,7 @@ import React from 'react'
 import Head from 'next/head'
 import Navbar from '../AppNav/Nav'
 import LayoutProps from '../../interface/LayoutProps'
+import Footer from '../AppFooter/Footer'
 
 
 export default function Layout({ children }: LayoutProps) {
@@ -18,6 +19,7 @@ export default function Layout({ children }: LayoutProps) {
       <main className={styles.container}>
         {children}
       </main>
+        <Footer />
     </>
 
   )

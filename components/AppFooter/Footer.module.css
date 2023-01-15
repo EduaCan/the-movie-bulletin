@@ -1,0 +1,20 @@
+.container {
+    height: 8vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 120px;
+    color: grey;
+}
+
+.container a{
+ text-decoration: none;
+ color: grey;
+}
+
+.container a:hover{
+    transition: all 0.2s;
+    text-decoration: none;
+    color: aliceblue;
+   }

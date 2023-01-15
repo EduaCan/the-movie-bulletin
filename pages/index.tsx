@@ -10,6 +10,8 @@ import Movie from '../components/AppMovie/Movie'
 // const inter = Inter({ subsets: ['latin'] })
 
 export default function Home({ popularMovies, upcomingMovies }: movieListProps) {
+  const {favouriteMovies} = useAppSelector((state) => state.favouriteMovies.favouriteMovies)
+
   const dispatch = useAppDispatch()
   dispatch(addPopularMovies(popularMovies))
   dispatch(addUpcomingMovies(upcomingMovies))
@@ -27,8 +29,7 @@ export default function Home({ popularMovies, upcomingMovies }: movieListProps) 
             <MovieList moviesToList={upcomingMovies} title={'Top Upcoming movies'} />
           </div>
           <div>
-            <h1>Favorites</h1>
-            <p>Comming soon</p>
+          <MovieList moviesToList={favouriteMovies} title={'Top Favourites movies'} />
           </div>
         </div>
       </div>

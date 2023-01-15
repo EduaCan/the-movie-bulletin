@@ -2,7 +2,7 @@ import type { GetServerSidePropsContext } from "next";
 import { castDetails, movieDetailsProps } from "../../interface/movie";
 import Tmdb from "../../services/tmdb.services"
 import styles from './Movie.module.css'
-import CastList from "../../components/CastList/CastList";
+import CastList from "../../components/AppCastList/CastList";
 import MovieSelected from "../../components/AppMovie/Movie";
 import Overview from "../../components/AppOverview/Overview";
 
