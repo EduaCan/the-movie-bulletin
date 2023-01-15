@@ -113,4 +113,17 @@
     font-size: 0.9rem;
     margin: 0 auto;
   }
+
+  .mainTitle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.7rem;
+  }
+
+  .mainTitle a {
+    font-size: 1rem;
+    margin-top: 5px;
+  }
+
 }
