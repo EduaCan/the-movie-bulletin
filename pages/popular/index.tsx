@@ -2,6 +2,7 @@
 import MovieList from "../../components/AppMovieList/MovieList"
 import { useAppSelector } from "../../store/hooks"
 import Router from 'next/router';
+import { NextSeo } from "next-seo";
 
 export default function Popular() {
 
@@ -12,6 +13,10 @@ export default function Popular() {
 
   return (
     <>
+            <NextSeo
+            title="Popular | TMBulletin"
+            description="List of top movies"
+            />
       <MovieList moviesToList={popularMovies} title={'Popular Movies'} />
     </>
   )

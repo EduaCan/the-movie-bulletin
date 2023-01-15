@@ -5,6 +5,7 @@ import styles from './Movie.module.css'
 import CastList from "../../components/AppCastList/CastList";
 import MovieSelected from "../../components/AppMovie/Movie";
 import Overview from "../../components/AppOverview/Overview";
+import { NextSeo } from "next-seo";
 
 
 
@@ -12,6 +13,10 @@ export default function Movie({ details, cast }: movieDetailsProps) {
 
   return (
     <div className={styles.movieMain}>
+              <NextSeo
+            title={`${details.title}`}
+            description={`details of ${details.title}`}
+            />
       <MovieSelected details={details} />
       <Overview details={details} />
       <CastList cast={cast} />

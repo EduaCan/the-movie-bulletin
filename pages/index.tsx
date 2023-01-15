@@ -6,8 +6,8 @@ import { movieListProps, movieReduced } from '../interface/movie'
 import MovieList from '../components/AppMovieList/MovieList'
 import styles from './home.module.css'
 import Movie from '../components/AppMovie/Movie'
-
-// const inter = Inter({ subsets: ['latin'] })
+import { randomInteger } from '../utils/randomInteger'
+import {NextSeo} from 'next-seo';
 
 export default function Home({ popularMovies, upcomingMovies }: movieListProps) {
   const {favouriteMovies} = useAppSelector((state) => state.favouriteMovies.favouriteMovies)
@@ -16,10 +16,16 @@ export default function Home({ popularMovies, upcomingMovies }: movieListProps) 
   dispatch(addPopularMovies(popularMovies))
   dispatch(addUpcomingMovies(upcomingMovies))
 
+  
+
   return (
     <>
+    <NextSeo
+            title="Home | TMBulletin"
+            description="Home of the movie bulletin page"
+            />
       <div className={styles.container}>
-        <Movie details={popularMovies[0]} />
+        <Movie details={popularMovies[randomInteger(0, 19)]} />
         <div className={styles.main}>
           <div>
             <MovieList moviesToList={popularMovies} title={'Top Popular movies'} />
