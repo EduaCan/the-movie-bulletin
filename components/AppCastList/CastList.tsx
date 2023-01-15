@@ -1,6 +1,6 @@
 import Image from "next/image"
 import { castDetails, movieDetailsProps } from "../../interface/movie";
-import styles from '../../components/CastList/CastList.module.css'
+import styles from '../../components/AppCastList/CastList.module.css'
 
 
 export default function CastList({ cast }: movieDetailsProps) {

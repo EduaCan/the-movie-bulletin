@@ -41,7 +41,7 @@ export default function MovieList({ moviesToList, title }: movieListReceivedProp
                         <Link href={title.split(' ')[1].toLowerCase()} className={styles.linkTitle}>Explore all</Link>
                     }
                 </div>
-                <p>{moviesToList.length} Items</p>
+                <p>{moviesToList?.length} Items</p>
             </div>
             <div className={pathname === '/' ? styles.homeContainer : styles.container}>
                 {moviesToList.map((movie: movieReduced, index) => {

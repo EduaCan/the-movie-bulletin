@@ -75,3 +75,10 @@ export interface Array<castDetails> { }
 export interface ratingDetails {
   voteAverage: number
 }
+
+export interface likeButtonProps {
+  details: movieReduced,
+  filteringFavourites: any,
+  success: any
+  
+}

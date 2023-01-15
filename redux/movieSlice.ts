@@ -1,6 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit'
 import type { PayloadAction } from '@reduxjs/toolkit'
-import type { RootState } from '../store/store'
 import { movieReduced } from '../interface/movie'
 
 // Define a type for the slice state
@@ -32,6 +31,6 @@ export const apiMoviesSlice = createSlice({
 export const { addPopularMovies, addUpcomingMovies } = apiMoviesSlice.actions
 
 // Other code such as selectors can use the imported `RootState` type
-export const selectApiMovies = (state: RootState) => { state.popularMovies, state.upcomingMovies}
+export const selectApiMovies = (state: moviesState) => { state.popularMovies, state.upcomingMovies}
 
 export default apiMoviesSlice.reducer

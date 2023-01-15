@@ -1,11 +1,11 @@
 import { BsSuitHeart, BsSuitHeartFill } from 'react-icons/Bs'
-import { movieDetailsProps } from '../../interface/movie'
+import { likeButtonProps } from '../../interface/movie'
 import { addFavouriteMovies } from '../../redux/favouriteSlice'
 import { useAppDispatch } from '../../store/hooks'
 import styles from './LikeButton.module.css'
 
 
-export default function LikeButton({details, filteringFavourites, success }: movieDetailsProps) {
+export default function LikeButton({details, filteringFavourites, success }: likeButtonProps) {
     const dispatch = useAppDispatch()
 
     

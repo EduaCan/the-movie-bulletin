@@ -6,7 +6,7 @@ import { movieReduced } from '../interface/movie'
 
 // Define a type for the slice state
 interface favouritesState {
-  favouriteMovies: any
+  favouriteMovies: []  | movieReduced[]
 }
 
 // Define the initial state using that type
