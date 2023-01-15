@@ -5,7 +5,6 @@ import favouriteMoviesReducer from '../redux/favouriteSlice'
 import { persistReducer } from "redux-persist";
 import storage from "redux-persist/lib/storage";
 import { combineReducers } from '@reduxjs/toolkit';
-import thunk from 'redux-thunk';
 
 //redux-persist
 const persistConfig = {
@@ -25,8 +24,7 @@ const persistedReducer = persistReducer(persistConfig, rootReducer)
 export const store= configureStore({
   reducer: {
     apiMovies: apiMoviesReducer,
-    favouriteMovies: persistedReducer,
-    middleware: [thunk],
+    favouriteMovies: persistedReducer
   },
 })
 
