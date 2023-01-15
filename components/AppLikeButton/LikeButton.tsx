@@ -1,4 +1,4 @@
-import { BsSuitHeart, BsSuitHeartFill } from 'react-icons/Bs'
+import { BsSuitHeart, BsSuitHeartFill } from 'react-icons/bs'
 import { likeButtonProps } from '../../interface/movie'
 import { addFavouriteMovies } from '../../redux/favouriteSlice'
 import { useAppDispatch } from '../../store/hooks'
