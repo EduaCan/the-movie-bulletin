@@ -16,7 +16,7 @@ export default function Upcoming() {
     <>
         <NextSeo
             title="Upcoming | TMBulletin"
-            description="Upcoming movies"
+            description="List of upcoming movies"
             />
       <MovieList moviesToList={upcomingMovies} title={'Upcoming Movies'} />
     </>
