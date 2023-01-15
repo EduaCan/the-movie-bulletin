@@ -14,9 +14,6 @@ export default function Home({ popularMovies, upcomingMovies }: movieListProps) 
   dispatch(addPopularMovies(popularMovies))
   dispatch(addUpcomingMovies(upcomingMovies))
 
-  const favouriteMovies = useAppSelector((state) => state.favouriteMovies.favouriteMovies)
-  console.log(favouriteMovies)
-
 
   return (
     <>

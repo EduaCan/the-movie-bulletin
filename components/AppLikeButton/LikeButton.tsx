@@ -5,8 +5,7 @@ import { addFavouriteMovies } from '../../redux/favouriteSlice'
 import { useAppDispatch, useAppSelector } from '../../store/hooks'
 import styles from './LikeButton.module.css'
 
-export default function LikeButton({details}: movieDetailsProps) {
-    const [si, setSi] = useState(false)
+export default function LikeButton({details, filteringFavourites }: movieDetailsProps) {
     const dispatch = useAppDispatch()
 
     
@@ -14,10 +13,11 @@ export default function LikeButton({details}: movieDetailsProps) {
         dispatch(addFavouriteMovies(details))
     }
 
+
     
     return (
         <button className={styles.likeButton} onClick={handleLikeButto}>
-            {si ?
+            {filteringFavourites(details.id).length !== 0 ?
                 <BsSuitHeartFill size={30} color={'#2196f3'} /> :
                 <BsSuitHeart size={30} color={'#2196f3'} />}
         </button>

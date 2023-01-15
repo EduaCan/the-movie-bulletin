@@ -25,7 +25,8 @@ export const store = configureStore({
   reducer: {
     apiMovies: apiMoviesReducer,
     favouriteMovies: persistedReducer,
-    middleware: [thunk]
+    middleware: [thunk],
+    
   },
 })
 

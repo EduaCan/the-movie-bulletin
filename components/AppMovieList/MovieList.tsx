@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { movieReduced, movieListReceivedProps } from "../../interface/movie";
+import { useAppSelector } from "../../store/hooks";
 import LikeButton from "../AppLikeButton/LikeButton";
 import Rating from "../AppRating/Rating";
 import styles from './MovieList.module.css'
@@ -9,6 +10,18 @@ import styles from './MovieList.module.css'
 export default function MovieList({ moviesToList, title }: movieListReceivedProps) {
     const router = useRouter()
     const { pathname } = router
+
+    const {favouriteMovies} = useAppSelector((state) => state.favouriteMovies.favouriteMovies)
+
+    const filteringFavourites = (id: number) => {
+     return favouriteMovies.filter((movie: movieReduced)  =>{
+         if (movie.id === id) {
+           return true
+         }})
+ 
+    }
+
+
 
     const imageSize = "w500" //move to better place
     return (
@@ -30,7 +43,7 @@ export default function MovieList({ moviesToList, title }: movieListReceivedProp
                         }
                         return (
                             <div key={movie.id} className={styles.cardContainer}  >
-                                <LikeButton details={movie} />
+                                <LikeButton details={movie} filteringFavourites={filteringFavourites}/>
                                 <Link href={`/movie/${movie.id}`} className={styles.linkImage}>
                                     <Image src={`https://image.tmdb.org/t/p/${imageSize}${movie.poster_path}`} alt={movie.title} fill={true} className={styles.cardImage} />
                                 </Link>

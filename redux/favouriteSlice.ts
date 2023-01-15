@@ -18,12 +18,14 @@ export const favouriteMoviesSlice = createSlice({
     name: 'favouriteMovies',
     initialState,
     reducers: {
-       addFavouriteMovies: (state, action: PayloadAction<movieReduced>) => {
-         const movieExist = state.favouriteMovies.filter((movie: { id: any }) => movie.id === action.payload.id);
-         if(movieExist.length === 0){
+      addFavouriteMovies: (state, action: PayloadAction<movieReduced>) => {
+        const movieExist = state.favouriteMovies.findIndex((movie: movieReduced) => movie.id === action.payload.id);
+        if(movieExist !== -1){
+           state.favouriteMovies = [...state.favouriteMovies.slice(0, movieExist), ...state.favouriteMovies.slice(movieExist + 1)];
+        }else{
            state.favouriteMovies = [...state.favouriteMovies, action.payload];
-         }
-       }
+        }
+    },
     },
   })
 
