@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { BsSuitHeart, BsSuitHeartFill } from 'react-icons/Bs'
 import { movieDetailsProps } from '../../interface/movie'
-import { addFavouriteMovies } from '../../redux/movieSlice'
+import { addFavouriteMovies } from '../../redux/favouriteSlice'
 import { useAppDispatch, useAppSelector } from '../../store/hooks'
 import styles from './LikeButton.module.css'
 

@@ -30,7 +30,6 @@ export interface movieReduced extends movieBasic {
   revenue: string
   runtime: string
   budget: string
-  id: number
 }
 
 

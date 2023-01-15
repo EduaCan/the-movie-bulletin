@@ -5,7 +5,7 @@ import styles from './Favourites.module.css'
 
 export default function Favourites() {
 
-  const favouriteMovies = useAppSelector((state) => state.apiMovies.favouriteMovies)
+  const {favouriteMovies} = useAppSelector((state) => state.favouriteMovies.favouriteMovies)
 
   return (
     <>

@@ -1,6 +1,6 @@
 // import { Inter } from '@next/font/google'
 import Tmdb from '../services/tmdb.services'
-import { useAppDispatch } from '../store/hooks'
+import { useAppDispatch, useAppSelector } from '../store/hooks'
 import { addPopularMovies, addUpcomingMovies } from '../redux/movieSlice'
 import { movieListProps, movieReduced } from '../interface/movie'
 import MovieList from '../components/AppMovieList/MovieList'
@@ -14,6 +14,8 @@ export default function Home({ popularMovies, upcomingMovies }: movieListProps) 
   dispatch(addPopularMovies(popularMovies))
   dispatch(addUpcomingMovies(upcomingMovies))
 
+  const favouriteMovies = useAppSelector((state) => state.favouriteMovies.favouriteMovies)
+  console.log(favouriteMovies)
 
 
   return (
