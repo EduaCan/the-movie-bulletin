@@ -1,12 +1,15 @@
+import MovieList from '../../components/AppMovieList/MovieList'
+import { useAppSelector } from '../../store/hooks'
 import styles from './Favourites.module.css'
 
 
 export default function Favourites() {
+
+  const favouriteMovies = useAppSelector((state) => state.apiMovies.favouriteMovies)
+
   return (
     <>
-      <div className={styles.container}>
-        <h1>Favoritos</h1>
-      </div>
+      <MovieList moviesToList={favouriteMovies} title={'Favourite movies'} />
     </>
   )
 }

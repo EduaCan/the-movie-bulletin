@@ -18,7 +18,7 @@ export interface movieListReceivedProps {
 }
 
 export interface movieDetailsProps {
-  details?: movieDetails | movieReduced
+  details?: any
   cast?: castDetails[]
   popularity?: any
 }
@@ -30,6 +30,7 @@ export interface movieReduced extends movieBasic {
   revenue: string
   runtime: string
   budget: string
+  id: number
 }
 
 

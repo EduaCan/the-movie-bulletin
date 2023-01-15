@@ -14,6 +14,8 @@ export default function Home({ popularMovies, upcomingMovies }: movieListProps) 
   dispatch(addPopularMovies(popularMovies))
   dispatch(addUpcomingMovies(upcomingMovies))
 
+
+
   return (
     <>
       <div className={styles.container}>

@@ -4,7 +4,7 @@ import  apiMoviesReducer  from '../redux/movieSlice'
 
 export const store = configureStore({
   reducer: {
-    apiMovies: apiMoviesReducer,
+    apiMovies: apiMoviesReducer
   },
 })
 

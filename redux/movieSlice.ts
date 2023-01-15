@@ -7,13 +7,17 @@ import { movieReduced } from '../interface/movie'
 interface moviesState {
   popularMovies: []  | movieReduced[]
   upcomingMovies: [] | movieReduced[]
+  favouriteMovies: [] | movieReduced[]
 }
+
+
 
 
 // Define the initial state using that type
 const initialState: moviesState = {
   popularMovies: [],
-  upcomingMovies: []
+  upcomingMovies: [],
+  favouriteMovies: []
 }
 
 export const apiMoviesSlice = createSlice({
@@ -26,13 +30,19 @@ export const apiMoviesSlice = createSlice({
     },
     addUpcomingMovies: (state, action: PayloadAction<movieReduced[]>) => {
       state.upcomingMovies = action.payload
+    },
+    addFavouriteMovies: (state, action: PayloadAction<movieReduced[]>) => {
+      const movieExist = state.favouriteMovies.filter((movie) => movie.id === action.payload.id);
+      if(movieExist.length === 0){
+        state.favouriteMovies = [...state.favouriteMovies, action.payload];
+      }
     }
   },
 })
 
-export const { addPopularMovies, addUpcomingMovies } = apiMoviesSlice.actions
+export const { addPopularMovies, addUpcomingMovies, addFavouriteMovies } = apiMoviesSlice.actions
 
 // Other code such as selectors can use the imported `RootState` type
-export const selectApiMovies = (state: RootState) => {state.popularMovies, state.upcomingMovies}
+export const selectApiMovies = (state: RootState) => { state.popularMovies, state.upcomingMovies, state.favouriteMovies}
 
 export default apiMoviesSlice.reducer
