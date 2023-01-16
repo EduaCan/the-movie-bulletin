@@ -24,7 +24,7 @@ The Movie Bulletin is a movie website developed with next js in server side rend
 ## Acknowledgements ⭐
 ![App Screenshot](https://raw.githubusercontent.com/yebrai/the-movie-bulletin/main/assets/image/tmdb.svg)
 
- - [The Movie Database](https://awesomeopensource.com/project/elangosundar/awesome-README-templates)
+ - [The Movie Database](https://developers.themoviedb.org/3/getting-started/introduction)
 ## Deploy on Vercel
 
 #### [The Movie Bulletin](https://the-movie-bulletin.vercel.app/)
