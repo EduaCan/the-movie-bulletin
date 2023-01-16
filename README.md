@@ -22,7 +22,7 @@ The Movie Bulletin is a movie website developed with next js in server side rend
   [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/)
  
 ## Acknowledgements ⭐
-![App Screenshot](https://raw.githubusercontent.com/yebrai/the-movie-bulletin/main/assets/image/tmdbg.svg)
+![App Screenshot](https://raw.githubusercontent.com/yebrai/the-movie-bulletin/main/assets/image/tmdb.svg)
 
  - [The Movie Database](https://awesomeopensource.com/project/elangosundar/awesome-README-templates)
 ## Deploy on Vercel
