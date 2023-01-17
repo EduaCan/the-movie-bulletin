@@ -2,7 +2,7 @@
   position: relative;
   width: 400px;
   height: 550px;
-  margin: 20px 70px;
+  margin: 2vh 4vw;
 }
 
 .container {
@@ -59,7 +59,7 @@
   }
 
   .imageContainer {
-    width: 40vw;
+    width: 38vw;
     height: auto;
   }
 

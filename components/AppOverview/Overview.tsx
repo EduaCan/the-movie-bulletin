@@ -25,10 +25,10 @@ export default function Overview({ details }: movieDetailsProps) {
                     </div>
                 </div>
                 <div className={styles.detailsCointainer}>
-                    {/* <div>
+                    <div>
                         <h1>Storyline</h1>
                         <p>{details?.overview}</p>
-                    </div> */}
+                    </div>
                     <table>
                         <tbody>
                             <tr>
