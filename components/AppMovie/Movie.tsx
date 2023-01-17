@@ -18,9 +18,7 @@ export default function Movie ({ details }: movieDetailsProps) {
         <div className={styles.imageContainer}>
             <Image className={styles.imageMovie} 
             src={details?.backdrop_path ? `https://image.tmdb.org/t/p/w1280${details?.backdrop_path}` : "/generic-poster.jpg"} 
-            fill={true} alt={details?.title ? details.title : ""} 
-            placeholder="blur"
-            blurDataURL="/generic-poster.jpg"/>
+            fill={true} alt={details?.title ? details.title : ""} />
         </div>
     </div>
     )
