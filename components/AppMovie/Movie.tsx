@@ -16,7 +16,11 @@ export default function Movie ({ details }: movieDetailsProps) {
             <p>{details?.overview.slice(0, 300)+ "..."}</p>
         </div>
         <div className={styles.imageContainer}>
-            <Image className={styles.imageMovie} src={`https://image.tmdb.org/t/p/w1280${details?.backdrop_path}`} fill={true} alt={details?.title ? details.title : ""} />
+            <Image className={styles.imageMovie} 
+            src={details?.backdrop_path ? `https://image.tmdb.org/t/p/w1280${details?.backdrop_path}` : "/generic-poster.jpg"} 
+            fill={true} alt={details?.title ? details.title : ""} 
+            placeholder="blur"
+            blurDataURL="/generic-poster.jpg"/>
         </div>
     </div>
     )

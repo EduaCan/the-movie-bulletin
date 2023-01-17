@@ -13,10 +13,10 @@ export default function Movie({ details, cast }: movieDetailsProps) {
 
   return (
     <div className={styles.movieMain}>
-              <NextSeo
-            title={`${details.title}`}
-            description={`details of ${details.title}`}
-            />
+      <NextSeo
+        title={`${details.title}`}
+        description={`details of ${details.title}`}
+      />
       <MovieSelected details={details} />
       <Overview details={details} />
       <CastList cast={cast} />
