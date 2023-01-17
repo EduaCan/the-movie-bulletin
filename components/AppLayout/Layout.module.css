@@ -4,3 +4,16 @@
   margin-left: 8.7vw;
 }
 
+@media (min-width: 800px) {
+  .container {
+    margin-left: 5.5vw;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    margin-left: 4vw;
+  }
+}
+
+
