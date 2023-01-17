@@ -6,27 +6,29 @@ import styles from './Overview.module.css'
 export default function Overview({ details }: movieDetailsProps) {
 
     const minToHours = (minutes: number) => {
-        return `${(minutes / 60) ^ 0}h ` + (minutes % 60) + 'min';
+        return minutes !== 0 ? `${(minutes / 60) ^ 0}h ` + (minutes % 60) + 'min' : "N/A";
     };
 
-    const numberWithCommas = (number: string): string => {
-        return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+    const numberWithCommas = (number: number): string => {
+        return number !== 0 ? number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',') : "N/A";
     };
 
     const detailsGenres = details?.genres.map((genre: any) => genre.name).join(', ')
     const languages = details?.spoken_languages.map((lan: any) => lan.name).join(', ')
-
+    
     return (
         <>
             <div className={styles.container}>
                 <div className={styles.imageContainer}>
-                    <Image className={styles.imageCard} src={`https://image.tmdb.org/t/p/w1280${details?.poster_path}`} fill={true} alt={details?.title ? details.title : ""} />
+                    <div className={styles.imageCard}>
+                        <Image src={`https://image.tmdb.org/t/p/w1280${details?.poster_path}`} fill={true} alt={details?.title ? details.title : ""} />
+                    </div>
                 </div>
                 <div className={styles.detailsCointainer}>
-                    <div>
+                    {/* <div>
                         <h1>Storyline</h1>
                         <p>{details?.overview}</p>
-                    </div>
+                    </div> */}
                     <table>
                         <tbody>
                             <tr>

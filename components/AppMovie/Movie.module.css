@@ -39,7 +39,7 @@
     .movieContainer {
         flex-direction: column-reverse;
         align-items: flex-start;
-        margin: 25px 25px 0 0;
+        margin: 0;
         font-size: 0.9rem;
     }
 

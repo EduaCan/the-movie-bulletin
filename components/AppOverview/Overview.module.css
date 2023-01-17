@@ -44,18 +44,23 @@
   justify-content: end;
 }
 
-@media (max-width: 900px) {
+.imageCard{
+  width: 40vw;
+  height: 50vw;
+}
+
+@media (max-width: 800px) {
   .container {
     font-size: 1.3rem;
   }
 
   .container p {
-    font-size: 1.8rem;
+    font-size: 1.3rem;
   }
 
   .imageContainer {
-    width: 550px;
-    height: 650px;
+    width: 40vw;
+    height: auto;
   }
 
   .detailsCointainer {
