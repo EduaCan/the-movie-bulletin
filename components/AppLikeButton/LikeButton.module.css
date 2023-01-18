@@ -2,7 +2,7 @@
   margin: 0;
   position: absolute;
   z-index: 2;
-  transform: translate(210px, -210px);
+  transform: translate(210px, 20px);
   background-color: transparent;
   border: none;
   transition: all 0.2s;
@@ -10,7 +10,7 @@
 
 .likeButton:hover {
   cursor: pointer;
-  transform: translate(210px, -210px) scale(1.2);
+  transform: translate(210px, 20px) scale(1.2);
   transition: all 0.5s;
 }
 
@@ -18,8 +18,8 @@
   .likeButton {
     margin: 0;
     position: absolute;
+    transform: translate(75px, 10px);
     z-index: 2;
-    transform: translate(75px, -100px);
     background-color: transparent;
     border: none;
     transition: all 0.2s;
@@ -27,7 +27,7 @@
 
   .likeButton:hover {
     cursor: pointer;
-    transform: translate(75px, -100px) scale(1.1);
+    transform: translate(75px, 10px) scale(1.1);
     transition: all 0.5s;
   }
 }

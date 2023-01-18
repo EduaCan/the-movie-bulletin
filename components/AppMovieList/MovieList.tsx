@@ -7,10 +7,17 @@ import LikeButton from "../AppLikeButton/LikeButton";
 import Rating from "../AppRating/Rating";
 import styles from './MovieList.module.css'
 import toast, { Toaster } from "react-hot-toast";
+import { useEffect, useState } from "react";
 
 export default function MovieList({ moviesToList, title }: movieListReceivedProps) {
     const router = useRouter()
     const { pathname } = router
+
+    const [isFetching, setIsFetching] = useState(false)
+
+    useEffect(()=> {
+        setIsFetching(true)
+    }, [])
 
     const { favouriteMovies } = useAppSelector((state) => state.favouriteMovies.favouriteMovies)
 
@@ -52,7 +59,7 @@ export default function MovieList({ moviesToList, title }: movieListReceivedProp
                             <div key={movie.id} className={styles.cardContainer}  >
                                 <LikeButton details={movie} filteringFavourites={filteringFavourites} success={success} />
                                 <Link href={`/movie/${movie.id}`} className={styles.linkImage}>
-                                    <Image src={`https://image.tmdb.org/t/p/${imageSize}${movie.poster_path}`} alt={movie.title} fill={true} className={styles.cardImage} />
+                                    <Image src={`https://image.tmdb.org/t/p/${imageSize}${movie.poster_path}`} alt={movie.title} fill={true} className={isFetching ? styles.cardImage : styles.cardImageBefore} />
                                 </Link>
                                 <Link href={`/movie/${movie.id}`} >{movie.title.length >= 30 ? movie.title.slice(0, 28) + "..." : movie.title}</Link>
                                 <Rating voteAverage={movie.vote_average} />

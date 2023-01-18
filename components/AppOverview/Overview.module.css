@@ -61,6 +61,7 @@
   .imageContainer {
     width: 38vw;
     height: auto;
+    overflow: hidden;
   }
 
   .detailsCointainer {

@@ -2,16 +2,16 @@
   display: flex;
   flex-direction: column;
   text-align: start;
+  margin-left: 30px
 }
 
 .container {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  width: 99%;
   justify-content: center;
   gap: 10vh 5vw;
-  margin: 8vw 2vh;
+
 }
 
 .container a,
@@ -32,9 +32,9 @@
 .cardContainer {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: left;
-  gap: 1vh 1vw;
+  gap: 1vw 1vh;
 }
 
 .linkImage {
@@ -46,9 +46,15 @@
 }
 
 .cardImage {
-  position: relative;
   height: 100%;
-  transition: transform 0.3s;
+  transition: transform 0.3s, opacity 0.5s;
+  opacity: 1;
+}
+
+.cardImageBefore {
+  opacity: 0;
+  transform: scale(0.95);
+
 }
 
 .cardImage:hover {

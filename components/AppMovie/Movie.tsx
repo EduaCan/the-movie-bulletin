@@ -1,13 +1,18 @@
-
 import Image from 'next/image'
-import React, { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import { movieDetailsProps } from '../../interface/movie'
 import Rating from '../AppRating/Rating'
 import styles from './Movie.module.css'
 
 
-export default React.memo(function Movie ({ details }: movieDetailsProps) {
+export default function Movie ({ details }: movieDetailsProps) {
+    const [isFetching, setIsFetching] = useState(false)
 
+
+    useEffect(()=> {
+        setIsFetching(true)
+    }, [])
+    
 
     return (
     <div className={styles.movieContainer}>
@@ -17,10 +22,11 @@ export default React.memo(function Movie ({ details }: movieDetailsProps) {
             <p>{details?.overview.slice(0, 300)+ "..."}</p>
         </div>
         <div className={styles.imageContainer}>
-            <Image className={styles.imageMovie} 
+        <Image className={isFetching ? styles.imageMovie : styles.imageMovieBefore} 
             src={details?.backdrop_path ? `https://image.tmdb.org/t/p/w1280${details?.backdrop_path}` : "/generic-poster.jpg"} 
-            fill={true} alt={details?.title ? details.title : ""} />
+            fill={true} alt={details?.title ? details.title : ""}
+            />
         </div>
     </div>
     )
-})
+}

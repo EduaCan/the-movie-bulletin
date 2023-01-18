@@ -9,7 +9,7 @@
   min-height: 100%;
   position: fixed;
   font-size: 30px;
-  padding: 4vw 4vh;
+  padding: 30px;
   margin: 0;
   list-style: none;
   background-color: black;
@@ -34,7 +34,6 @@
 @media (max-width: 1050px) {
   .container {
     z-index: 2;
-    align-content: flex-end;
   }
 }
 
