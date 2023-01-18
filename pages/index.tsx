@@ -8,6 +8,7 @@ import styles from './home.module.css'
 import Movie from '../components/AppMovie/Movie'
 import { randomInteger } from '../utils/randomInteger'
 import {NextSeo} from 'next-seo';
+import { useState } from 'react'
 
 export default function Home({ popularMovies, upcomingMovies }: movieListProps) {
   const {favouriteMovies} = useAppSelector((state) => state.favouriteMovies.favouriteMovies)
@@ -16,7 +17,7 @@ export default function Home({ popularMovies, upcomingMovies }: movieListProps) 
   dispatch(addPopularMovies(popularMovies))
   dispatch(addUpcomingMovies(upcomingMovies))
 
-  
+  const [randomInt, setRandomInt] = useState(randomInteger(0, 19))
 
   return (
     <>
@@ -25,7 +26,7 @@ export default function Home({ popularMovies, upcomingMovies }: movieListProps) 
             description="Home of the movie bulletin page"
             />
       <div className={styles.container}>
-        <Movie details={popularMovies[randomInteger(0, 19)]} />
+        <Movie details={popularMovies[randomInt]} />
         <div className={styles.main}>
           <div>
             <MovieList moviesToList={popularMovies} title={'Top Popular movies'} />

@@ -8,6 +8,7 @@ import Footer from '../AppFooter/Footer'
 
 export default function Layout({ children }: LayoutProps) {
 
+
   return (
     <>
       <Head>

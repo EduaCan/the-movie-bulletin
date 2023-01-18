@@ -1,13 +1,14 @@
 
 import Image from 'next/image'
+import React, { useEffect } from 'react'
 import { movieDetailsProps } from '../../interface/movie'
 import Rating from '../AppRating/Rating'
 import styles from './Movie.module.css'
 
 
-export default function Movie ({ details }: movieDetailsProps) {
+export default React.memo(function Movie ({ details }: movieDetailsProps) {
 
-    
+
     return (
     <div className={styles.movieContainer}>
         <div className={styles.movieDetails}>
@@ -22,4 +23,4 @@ export default function Movie ({ details }: movieDetailsProps) {
         </div>
     </div>
     )
-}
+})

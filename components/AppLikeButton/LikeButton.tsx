@@ -1,3 +1,4 @@
+import React, { useEffect } from 'react'
 import { BsSuitHeart, BsSuitHeartFill } from 'react-icons/bs'
 import { likeButtonProps } from '../../interface/movie'
 import { addFavouriteMovies } from '../../redux/favouriteSlice'
@@ -5,17 +6,14 @@ import { useAppDispatch } from '../../store/hooks'
 import styles from './LikeButton.module.css'
 
 
-export default function LikeButton({details, filteringFavourites, success }: likeButtonProps) {
+export default React.memo(function LikeButton({details, filteringFavourites, success }: likeButtonProps) {
     const dispatch = useAppDispatch()
 
-    
     const handleLikeButto = () => {
         dispatch(addFavouriteMovies(details))
         success(details.id, details.title)
     }
 
-
-    
     return (
         <button className={styles.likeButton} onClick={handleLikeButto}>
 
@@ -24,4 +22,4 @@ export default function LikeButton({details, filteringFavourites, success }: lik
                 <BsSuitHeart size={30} color={'#2196f3'} />}
         </button>
     )
-}
+})

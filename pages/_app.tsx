@@ -12,6 +12,7 @@ export default function App({ Component, pageProps }: AppProps) {
 
 const persistor = persistStore(store)
 
+
   return (
     <Provider store={store}>
       <PersistGate loading={null} persistor={persistor}>
